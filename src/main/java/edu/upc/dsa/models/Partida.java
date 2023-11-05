@@ -4,16 +4,16 @@ import java.util.*;
 public class Partida {
     Juego juego;
     String idJugador;
-    int nivelActual;
+    String nivelActual;
     int puntosAcumulados;
     Date fechaCambioNivel;
 
     public Partida(Juego juego, String idJugador) {
         this.juego = juego;
         this.idJugador = idJugador;
-        this.nivelActual = 1;
+        this.nivelActual = "1";
         this.puntosAcumulados = 50;
-        this.fechaCambioNivel = null;
+        this.fechaCambioNivel = new Date();
     }
 
     public String getIdJugador(){
@@ -29,14 +29,18 @@ public class Partida {
         this.fechaCambioNivel = fechaCambioNivel;
     }
 
-    public int getNivelActual(){
+    public String getNivelActual(){
         return this.nivelActual;
     }
-    public void setNivelActual(int nivelActual){
+    public void setNivelActual(String nivelActual){
         this.nivelActual = nivelActual;
     }
     public Juego getJuego(){
         return this.juego;
+    }
+    @Override
+    public String toString() {
+        return "Partida [juego = "+juego.toString()+", \nidJugador = " + idJugador + ", \nnivelActual = " + nivelActual + ", \npuntosAcumulados = " + puntosAcumulados + ", \nfechaCambioNivel = " + fechaCambioNivel + " ]";
     }
 
 }

@@ -8,13 +8,13 @@ public class Juego {
     String descripcion;
     public int nivel;
 
-    public Juego() {
-        this.id = RandomUtils.getId();
-    }
+   // public Juego() {
+       // this.id = RandomUtils.getId();
+   // }
 
 
-    public Juego(String descripcion, int niveles) {
-        this();
+    public Juego(String id, String descripcion, int niveles) {
+        this.setId(id);
         this.setDescripcion(descripcion);
         this.setNivel(niveles);
     }
@@ -44,9 +44,7 @@ public class Juego {
         this.nivel = nivel;
     }
 
-   /* @Override
     public String toString() {
-        return "Track [id="+id+", title=" + title + ", singer=" + singer +"]";
+        return "Juego [id = "+id+", \ndescripcion = " + descripcion + ", \nniveles = " + nivel +"]";
     }
-*/
 }

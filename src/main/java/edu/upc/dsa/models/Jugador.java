@@ -5,6 +5,7 @@ import edu.upc.dsa.util.RandomUtils;
 public class Jugador {
     String id;
     Partida partida;
+
     public Jugador() {
         this.id = RandomUtils.getId();
         this.partida = null;
